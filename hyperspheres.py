@@ -1,10 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Mar 25 11:37:58 2021
-
-@author: uqkwhi18
-
-Program to compute the volume of n-dimensional hyperspheres of several radii.
+Program to compute the volume of n-dimensional hyperspheres of three radii.
 
 Input
 Radius of hyperspheres.
@@ -88,6 +83,8 @@ radius3 = eval(input("Enter a third radius of the hypersphere: "))
 print("\nnmax! = {}".format(nf(nmax)))
 print("\nnmax!! = {}".format(ndf(nmax)))
 
+
+# Calculate volumes for each radius.
 ndim1, nvol1 = V(nmax, radius1)
 ndim2, nvol2 = V(nmax, radius2)
 ndim3, nvol3 = V(nmax, radius3)
