@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 23 15:06:07 2021
-
-@author: uqkwhi18
-
 Program that computes the size of an algae bloom after some time t.
 
 Input
