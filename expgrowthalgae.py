@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 23 15:06:07 2021
-
-@author: uqkwhi18
-
 Program that computes the size of an algae bloom after some time t.
 
 Input
@@ -19,7 +14,6 @@ Predicted bloom size at the time t.
 The time when the lake will be completely covered by the bloom.
 """
 import numpy as np
-
 
 s0 = eval(input("Enter the intial bloom size value: "))
 sU = input("Enter the length units used for the initial bloom size: ")
