@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Jan 19 16:12:41 2021
-
-@author: uqkwhi18
+Plot sin function of radial position as a function of time.
+(Circular motion)
 """
 
 import numpy as np
