@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Jan 19 16:29:23 2021
-
-@author: uqkwhi18
-
 Program to calculate the volume of sphere.
 
 Input
@@ -13,7 +8,6 @@ Output
 Volume of sphere.
 """
 import numpy as np
-
 
 rsphere = eval(input("Enter the radius of the sphere in metres: "))
 
