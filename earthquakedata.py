@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Wed Mar 24 11:26:31 2021
-
-@author: uqkwhi18
-
 Program that requests the user to input a month and day, and responds by
 reading in a datafile on earthquakes in 2014 with the correct format for each
 record, processing it and printing out whether there was a major earthquake on
