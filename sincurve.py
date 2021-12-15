@@ -1,5 +1,5 @@
 """
-Plot sin function of radial position as a function of time.
+Plot sine function of radial position as a function of time.
 (Circular motion)
 """
 
