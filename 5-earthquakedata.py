@@ -22,7 +22,7 @@ The number of earthquakes that occured on the entered date.
 import numpy as np
 
 # Define path to data file.
-path = 'C:/Users/kiera/OneDrive/Documents/Job/BRC/Coding/5-worldearthquakes20'\
+path = 'C:/Users/kiera/OneDrive/Documents/Job/BRC/Coding/worldearthquakes20'\
        '14.dat'
 
 # Set the cloumn widths in preparation for reading in the data file: delimiters
