@@ -1,7 +1,7 @@
 """
 Program that solves an ODE using forward finite difference method.
-A particular case: simulating a sphere falling through an infinte viscous
-fluid. The forces taken into account are drag, weight and bouyancy.
+A particular case: simulating a sphere falling through an infinte volume
+viscous fluid. The forces taken into account are drag, weight and bouyancy.
 
 Input
 Initial velocity.
