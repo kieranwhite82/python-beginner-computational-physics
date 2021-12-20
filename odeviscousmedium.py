@@ -68,7 +68,7 @@ while i < N:
 
 # Estimate fluid characteristics, dynamic and kinematic viscosity. Assuming
 # terminal velocity has been reached by the end of the simulation.
-fMu = (2 / 9) * (sRho - fRho) * g * np.power(sR, 2) / abs(v[N])
+fMu = (2 / 9) * abs((sRho - fRho)) * g * np.power(sR, 2) / abs(v[N])
 fNu = fMu / fRho
 
 print("\nThe estimate of the dynamic viscosity: {0:.6g} PA.s\n\nThe estimate o\
