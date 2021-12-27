@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sun Dec 12 20:03:25 2021
-
-@author: kiera
-
 Program that performs numerical differentiation: three methods for first order
 ODE's, and one method for second order ODE's.
 
