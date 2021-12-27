@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Apr 22 16:57:16 2021
-
-@author: uqkwhi18
-
 Program that applies three numerical integration methods to solve integrand
 from fixed list of possibilities. 
 Updated to also take user input function with appropriate numpy functions.
