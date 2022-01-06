@@ -18,7 +18,7 @@ import random as rd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Initialise seed fo rrandom number generation, using default argument of time.
+# Initialise seed for random number generation, using default argument of time.
 rd.seed()
 
 # Get user input on variables.
