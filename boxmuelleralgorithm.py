@@ -5,6 +5,7 @@ one-dimensional and two-dimensional.
 
 Input
 Number of inital pseudorandom sample points to simulate
+Expected value of Gaussian distribution (mean)
 Standard deviation
 Number of standard deviations to bin sample points into
 Decimal places to round standard deviation to for representation
@@ -22,6 +23,7 @@ rd.seed()
 
 # Get user input on variables.
 N = eval(input("Enter the number of inital sample points: "))
+mu1 = eval(input("Enter the expectation value of the Gaussian distribution: "))
 sd = eval(input("Enter the standard deviation: "))
 nsd = eval(input("Enter the number of standard deviations from the mean to bin\
  sample points into: "))
@@ -66,7 +68,7 @@ for i in range(0, N):
        if r[i] > 0 and r[i] < 1:
               S = np.sqrt(-2 * np.log(r[i]) / r[i])
               s.append(S)
-              X1 = r1s[i] * s[j] * sd
+              X1 = (r1s[i] * s[j] * sd) + mu1
               x1.append(X1)
               X2 = r2s[i] * s[j] * sd
               x2.append(X2)
@@ -96,13 +98,20 @@ for i in range (0, len(s)):
        
        for n in range(0, 2 * nsd):
               
-              if x1[i] >= ((-nsd + n) * sd) and x1[i] < ((-nsd + n + 1) * sd):
+              if x1[i] - mu1 >= ((-nsd + n) * sd) and x1[i] - mu1 < ((-nsd + n\
+                                                      + 1) * sd):
                      b1[n] += 1
               else:
                      pass
-
+Ex = sum(x1) / len(s)
+Ex2 = sum(np.power(x1, 2)) / len(s)
+sdc = np.sqrt(Ex2 - np.power(Ex, 2))
 print("\n{} of the total {} Gaussian distributed points were within +-{} stand\
 ard deviations.".format(int(sum(b1)), len(s), round(nsd * sd, sdR)))
+print("\nThe expectation value of the Gaussian-distributed variables is {}; it\
+ should approach {}. The expectation value of the square of the Gaussian-distr\
+ibuted values is {}. This results in a calculated standard deviation of {}, co\
+mpared to the user entered value {}.".format(Ex, mu1, Ex2, sdc, sd))
 
 # Plot results.
 fig, axs = plt.subplots(2, 2)
@@ -129,8 +138,12 @@ axs[1, 0].set_ylabel('Fraction')
 
 lbl = []
 for i in range(0, (2 * nsd) + 1):
-       LBL = r"${0}\sigma$".format(round(sd * (-nsd + i), sdR))
-       lbl.append(LBL)
+       if i == nsd:
+              LBL = r"$\mu$"
+              lbl.append(LBL)
+       else:
+              LBL = r"${0}\sigma$".format(round(sd * (-nsd + i), sdR))
+              lbl.append(LBL)
 
 s_ticks = np.arange(-nsd * sd, (nsd * sd) + sd, sd)
 
@@ -139,7 +152,7 @@ axs[1, 0].set_xticklabels(lbl)
 axs[1, 0].bar(x, b1 / len(s), width = sd, align = 'edge')
 axs[1, 0].set_xlim(-nsd * sd, nsd * sd)
 
-axs[1, 1].plot(x1, x2, '+')
+axs[1, 1].plot(x1 - (mu1 * np.ones(len(s))), x2, '+')
 axs[1, 1].set_title('2-D Gaussian sample distribution')
 axs[1, 1].set_xlabel('Gaussian variable X')
 axs[1, 1].set_ylabel('Gaussian variable Y')
