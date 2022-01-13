@@ -1,5 +1,5 @@
 """
-Program that performs Ornstien-Uhlenbeck process, using Euler method to solve
+Program that performs Ornstein-Uhlenbeck process, using Euler method to solve
 first order differential equation.
 """
 import random as rd
@@ -92,7 +92,7 @@ Vx[0] = Ex2[0] - np.square(Ex[0])
 
 
 """
-Perform Ornstien-Uhlenbeck process.
+Perform Ornstein-Uhlenbeck process.
 """
 for i in range(0, N):
        x[i + 1] = ou(i)
