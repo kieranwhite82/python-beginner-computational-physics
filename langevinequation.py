@@ -301,7 +301,7 @@ def animatex(i):
        ax1.clear()
        ax1.bar(Px, Pd[i, :], width=dx / 4, align='edge', color='b', \
                label = 't = {} seconds'.format(round(t[i], decp)))
-       s_ticks = np.arange(-3 * dx, (3 + 1) * dx, dx)
+       s_ticks = np.linspace(-3 * dx, 3 * dx, num = 7, endpoint = True)
        ax1.set_xticks(s_ticks)
        ax1.set_xticklabels(lblx)
        ax1.set_ylim(0, np.max(Pd))
@@ -319,7 +319,7 @@ def animatev(i):
        ax2.clear()
        ax2.bar(Pv, Vd[i, :], width=dv / 4, align='edge', color='b', \
                label = 't = {} seconds'.format(round(t[i], decp)))
-       s_ticks = np.arange(-3 * dv, (3 + 1) * dv, dv)
+       s_ticks = np.linspace(-3 * dv, 3 * dv, num = 7, endpoint = True)
        ax2.set_xticks(s_ticks)
        ax2.set_xticklabels(lblv)
        ax2.set_ylim(0, np.max(Vd))
