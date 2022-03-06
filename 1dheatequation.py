@@ -56,7 +56,7 @@ print("\nThe stability variable is {}".format(S))
 if S == 0.5:
        print("\nThe stability variable is equal to 1/2, shape should be \
 representative of true solution and solution should be stable.")
-elif S < 1:
+elif S < 0.5:
        print("\nThe stability variable is less than 1/2, shape will not be \
 representative of true solution and solution will be stable.")
 else:
