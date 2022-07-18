@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul  1 15:00:39 2022
-
-@author: KIERAN.WHITE
-
-Crank-Nicolson method for Schroedinger equation.
+Crank-Nicolson method for 1D TDSE equation.
 Working in natural units, with hbar = mass = 1.
 """
 import numpy as np
@@ -92,7 +88,7 @@ for i in range (0, M):
        Ar[i, i + 1] = beta
 
 # Corner elements for BC's.
-Ar[M, M], Ar[0, 0] = 1 - 2*beta, 1 - beta
+Ar[M, M], Ar[0, 0] = 1 - beta, 1 - beta
 
 # Thomas algorithm variables. Following similar naming as in Wiki article.
 a = np.diag(Al, -1)
