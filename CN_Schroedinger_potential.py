@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sun Aug  7 19:53:25 2022
-
-@author: KIERAN.WHITE
-
 Crank-Nicolson method for 1D Schroedinger equation.
 Working in natural units, with hbar = mass = 1.
 Gaussian quantum particle with initial momentum kick p = m*v = hbar*k = k, 
