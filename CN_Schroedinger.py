@@ -48,7 +48,7 @@ sda = np.zeros(len(t))
 # Position x: -a =< x =< a. M is an even number. There are M + 1 total discrete
 # positions, for the points to be symmetric and centred at x = 0.
 a = 100
-M = 1199
+M = 1200
 dx = (2 * a) / M
 x = np.linspace(-a, a, num = M + 1, endpoint = True)
 
