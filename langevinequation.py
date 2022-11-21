@@ -15,8 +15,8 @@ Box-Mueller algorithm. Returns a randomly picked number from a Gaussian
 distribution, of which the width is a function of variables dt and p. Slower in
 comparison to calling ready-made function, but shows process of creating
 pseudo-random samples with Gaussian distribution. Slow as every time the
-function is called, it creates an entire distributoin and picks one number
-from it at random. This is the noise term; source of stochastic behaviour.
+function is called, a new distribution is created from which a number is picked
+at random. This is the noise term; source of stochastic behaviour.
 """
 def dW(N, sd):
        
@@ -60,8 +60,8 @@ def xl(i):
        return x[i] + (v[i] * dt)
 
 """
-Variables for Langevin equation. Working in natural units: m, kB are equal to
-unity.
+Variables for Langevin equation. Working in natural units: m, kB are taken to
+be unity.
 """
 l, T, m, kB = 10.0, 2.0, 1.0, 1.0
 """
